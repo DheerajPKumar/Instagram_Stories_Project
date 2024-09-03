@@ -23,11 +23,17 @@ body {
             height: 70px;
             border-radius: 50%;
             object-fit: cover;
-            transition: transform 0.3s;
+            // transition: transform 0.3s;
+            transition: transform 0.3s, border-color 0.3s;
+            border: 2px solid red;
 
             &:hover{
                 transform: scale(1.1);
             }
+        }
+
+        &-grayborder{
+            border-color: gray; 
         }
     }
 }
@@ -104,6 +110,23 @@ body {
             height: auto;
             cursor: pointer;
             border-radius: 10px;
+        }
+
+        &-closebtn{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            z-index: 10;
+            top: 0;
+    
+            &:hover{
+                color: red;
+            }
         }
     }
 }

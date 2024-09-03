@@ -31,8 +31,12 @@ function storyPlay(storyId) {
         currentIndex = stories.findIndex(s => s.id === storyId);
         navigate();
         update();
+        
+        storyVideo.play();
+        updateBorder();
     }
 }
+
 
 function navigate() {
     let prevBtn = document.querySelector('.storyplayer__navigation-prevbtn');
@@ -84,3 +88,24 @@ nextStoryBtn.addEventListener('click', () => {
         storyPlay(stories[currentIndex].id);
     }
 });
+
+let closeBtn = document.querySelector('.storyplayer__content-closebtn');
+let storyplayer = document.querySelector(".storyplayer");
+let storycontainer = document.querySelector(".storiescontainer");
+
+closeBtn.addEventListener('click', () => {
+    storyplayer.style.display = "none";
+    storycontainer.style.display = "block";
+});
+
+let storiesBorder = document.querySelectorAll('.storiescontainer__story-image');
+
+storiesBorder.forEach(story => {
+    story.addEventListener('click', () => {
+        story.classList.add('storiescontainer__story-grayborder');
+    });
+});
+
+
+
+
