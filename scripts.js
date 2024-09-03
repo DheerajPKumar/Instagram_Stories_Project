@@ -102,6 +102,8 @@ closeBtn.addEventListener('click', () => {
     storycontainer.style.display = "block";
     leftBtn.style.display = 'block';
     rightBtn.style.display = 'block';
+    let storyVideo = document.querySelector('.storyplayer__content-main--video');
+    storyVideo.pause();
 });
 
 storiesBorder.forEach(story => {

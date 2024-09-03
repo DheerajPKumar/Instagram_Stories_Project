@@ -29,7 +29,7 @@ body {
     display: flex;
     overflow-x: scroll;
     white-space: nowrap;
-    max-width: 650px;
+    max-width: 680px;
     padding: 10px;
     position: relative;
 
@@ -44,7 +44,7 @@ body {
             height: 70px;
             border-radius: 50%;
             object-fit: cover;
-            // transition: transform 0.3s;
+            padding: 2px;
             transition: transform 0.3s, border-color 0.3s;
             border: 2px solid red;
 
@@ -57,26 +57,6 @@ body {
             border-color: gray; 
         }
     }
-
-    // &__arrow{
-    //     // position: absolute;
-    //     // top: 50%;
-    //     // transform: translateY(-50%);
-    //     background: #ffffff;
-    //     border: none;
-    //     cursor: pointer;
-    //     font-size: 24px;
-    //     // padding: 10px;
-    //     z-index: 10;
-
-    //     &-left{
-    //         left: 0;
-    //     }
-
-    //     &-right{
-    //         right: 0;
-    //     }
-    // }
 }
 
 #storyPlayer {

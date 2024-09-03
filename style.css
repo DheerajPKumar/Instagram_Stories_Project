@@ -28,7 +28,7 @@ body {
   display: flex;
   overflow-x: scroll;
   white-space: nowrap;
-  max-width: 650px;
+  max-width: 680px;
   padding: 10px;
   position: relative;
 }
@@ -44,6 +44,7 @@ body {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  padding: 2px;
   transition: transform 0.3s, border-color 0.3s;
   border: 2px solid red;
 }
