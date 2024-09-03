@@ -117,7 +117,13 @@ body {
   align-items: center;
   overflow: hidden;
 }
-.storyplayer__content-prev img, .storyplayer__content-next img {
+.storyplayer__content-pVideo {
+  width: 80%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.storyplayer__content-nVideo {
   width: 80%;
   height: auto;
   cursor: pointer;
@@ -125,7 +131,7 @@ body {
 }
 .storyplayer__content-closebtn {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
   background-color: transparent;
   border: none;

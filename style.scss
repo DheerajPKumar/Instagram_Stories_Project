@@ -126,7 +126,21 @@ body {
             overflow: hidden;
         }
 
-        &-prev img, &-next img{
+        // &-prev video, &-next video{
+        //     width: 80%;
+        //     height: auto;
+        //     cursor: pointer;
+        //     border-radius: 10px;
+        // }
+
+        &-pVideo{
+            width: 80%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        &-nVideo{
             width: 80%;
             height: auto;
             cursor: pointer;
@@ -135,7 +149,7 @@ body {
 
         &-closebtn{
             position: absolute;
-            top: 10px;
+            top: 20px;
             right: 10px;
             background-color: transparent;
             border: none;
