@@ -13,6 +13,13 @@ const stories = [
 
 let prevStoryBtn = document.querySelector(".storyplayer__navigation-prevbtn");
 let nextStoryBtn = document.querySelector(".storyplayer__navigation-nextbtn");
+let storiesBorder = document.querySelectorAll('.storiescontainer__story-image');
+let closeBtn = document.querySelector('.storyplayer__content-closebtn');
+let storyplayer = document.querySelector(".storyplayer");
+let storycontainer = document.querySelector(".storiescontainer");
+let leftBtn = document.querySelector(".container__arrow-left");
+let rightBtn = document.querySelector(".container__arrow-right");
+let container = document.querySelector(".container");
 
 let currentIndex = 0;
 
@@ -82,6 +89,7 @@ prevStoryBtn.addEventListener('click', () => {
         storyPlay(stories[currentIndex].id);
     }
 });
+
 nextStoryBtn.addEventListener('click', () => {
     if (currentIndex < stories.length - 1) {
         currentIndex++;
@@ -89,20 +97,32 @@ nextStoryBtn.addEventListener('click', () => {
     }
 });
 
-let closeBtn = document.querySelector('.storyplayer__content-closebtn');
-let storyplayer = document.querySelector(".storyplayer");
-let storycontainer = document.querySelector(".storiescontainer");
-
 closeBtn.addEventListener('click', () => {
     storyplayer.style.display = "none";
     storycontainer.style.display = "block";
+    leftBtn.style.display = 'block';
+    rightBtn.style.display = 'block';
 });
-
-let storiesBorder = document.querySelectorAll('.storiescontainer__story-image');
 
 storiesBorder.forEach(story => {
     story.addEventListener('click', () => {
         story.classList.add('storiescontainer__story-grayborder');
+        leftBtn.style.display = 'none';
+        rightBtn.style.display = 'none';
+    });
+});
+
+leftBtn.addEventListener('click', () => {
+    storycontainer.scrollBy({
+        left: -100,
+        behavior: 'smooth'
+    });
+});
+
+rightBtn.addEventListener('click', () => {
+    storycontainer.scrollBy({
+        left: 100,
+        behavior: 'smooth'
     });
 });
 

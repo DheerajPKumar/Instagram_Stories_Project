@@ -5,12 +5,32 @@ body {
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container__arrow {
+  background: #897b7b;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 24px;
+}
+
+.storiescontainer::-webkit-scrollbar {
+  display: none;
+}
+
 .storiescontainer {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   white-space: nowrap;
+  max-width: 650px;
   padding: 10px;
-  background: #f0f0f0;
+  position: relative;
 }
 .storiescontainer__story {
   display: inline-block;
