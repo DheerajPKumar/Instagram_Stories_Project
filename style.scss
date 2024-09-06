@@ -1,23 +1,21 @@
+@import "./sass/colors";
+@import "./sass/mixins";
+@import "./sass/functions";
+
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    @include justifyCenter;
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    @include flexCenter;
 
     &__arrow{
-        // background: #897b7b;
         border: none;
         cursor: pointer;
         border-radius: 50%;
-        padding: 5px;
-        font-size: 24px;
+        font-size: rem(24px);
     }
 }
 
@@ -29,24 +27,24 @@ body {
     display: flex;
     overflow-x: scroll;
     white-space: nowrap;
-    max-width: 680px;
-    padding: 10px;
+    max-width: rem(680px);
+    padding: rem(10px);
     position: relative;
 
     &__story{
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 rem(10px);
         cursor: pointer;
         position: relative;
 
         &-image{
-            width: 70px;
-            height: 70px;
+            width: rem(70px);
+            height: rem(70px);
             border-radius: 50%;
             object-fit: cover;
-            padding: 2px;
+            padding: rem(2px);
             transition: transform 0.3s ease-in-out, border-color 0.3s;
-            border: 2px solid red;
+            border: rem(2px) solid $color-primary;
 
             &:hover{
                 transform: scale(1.02);
@@ -54,7 +52,7 @@ body {
         }
 
         &-grayborder{
-            border-color: gray; 
+            border-color: $color-secondary; 
         }
     }
 }
@@ -68,12 +66,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: rem(20px);
+    border-radius: rem(10px);
+    box-shadow: 0 0 rem(10px) $color-shadow;
     z-index: 1000;
     width: 80%;
-    max-width: 1200px;
+    max-width: rem(1200px);
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -87,15 +85,15 @@ body {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 rem(20px);
 
         &-btn{
-            background: #fff;
+            background: $color-white;
             border: none;
-            padding: 10px;
+            padding: rem(10px);
             cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px;
+            border-radius: rem(5px);
+            font-size: rem(18px);
         }
     }
 
@@ -117,12 +115,12 @@ body {
                 width: 80%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 10px;
+                border-radius: rem(10px);
             }
         }
 
         &-prev, &-next{
-            flex: 0 0 300px;
+            flex: 0 0 rem(300px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -131,18 +129,11 @@ body {
             width: 100%;
         }
 
-        // &-prev video, &-next video{
-        //     width: 80%;
-        //     height: auto;
-        //     cursor: pointer;
-        //     border-radius: 10px;
-        // }
-
         &-pVideo{
             width: 80%;
             height: auto;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: rem(10px);
             object-fit: cover;
             height: 75%;
             width: 70%;
@@ -152,7 +143,7 @@ body {
             width: 80%;
             height: auto;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: rem(10px);
             object-fit: cover;
             height: 75%;
             width: 70%;
@@ -160,19 +151,19 @@ body {
 
         &-closebtn{
             position: absolute;
-            top: 20px;
-            right: 10px;
+            top: rem(20px);
+            right: rem(10px);
             background-color: transparent;
             border: none;
-            font-size: 24px;
+            font-size: rem(24px);
             cursor: pointer;
-            color: black;
+            color: $color-black;
             z-index: 10;
             top: 2%;
             transition: color 0.1s ease-in-out;
     
             &:hover{
-                color: #333;
+                color: $color-hover;
             }
         }
     }

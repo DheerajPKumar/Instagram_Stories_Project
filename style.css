@@ -9,14 +9,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 .container__arrow {
   border: none;
   cursor: pointer;
   border-radius: 50%;
-  padding: 5px;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .storiescontainer::-webkit-scrollbar {
@@ -27,25 +25,25 @@ body {
   display: flex;
   overflow-x: scroll;
   white-space: nowrap;
-  max-width: 680px;
-  padding: 10px;
+  max-width: 42.5rem;
+  padding: 0.625rem;
   position: relative;
 }
 .storiescontainer__story {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 0.625rem;
   cursor: pointer;
   position: relative;
 }
 .storiescontainer__story-image {
-  width: 70px;
-  height: 70px;
+  width: 4.375rem;
+  height: 4.375rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 2px;
+  padding: 0.125rem;
   transition: transform 0.3s ease-in-out, border-color 0.3s;
-  border: 2px solid red;
+  border: 0.125rem solid red;
 }
 .storiescontainer__story-image:hover {
   transform: scale(1.02);
@@ -63,12 +61,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
   z-index: 1000;
   width: 80%;
-  max-width: 1200px;
+  max-width: 75rem;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -82,15 +80,15 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 .storyplayer__navigation-btn {
   background: #fff;
   border: none;
-  padding: 10px;
+  padding: 0.625rem;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
 }
 .storyplayer__content {
   display: flex;
@@ -111,10 +109,10 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 .storyplayer__content-prev, .storyplayer__content-next {
-  flex: 0 0 300px;
+  flex: 0 0 18.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +124,7 @@ body {
   width: 80%;
   height: auto;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   -o-object-fit: cover;
      object-fit: cover;
   height: 75%;
@@ -136,7 +134,7 @@ body {
   width: 80%;
   height: auto;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   -o-object-fit: cover;
      object-fit: cover;
   height: 75%;
@@ -144,11 +142,11 @@ body {
 }
 .storyplayer__content-closebtn {
   position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 1.25rem;
+  right: 0.625rem;
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   color: black;
   z-index: 10;

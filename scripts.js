@@ -65,7 +65,7 @@ function update() {
         const prevVideo = document.createElement('video');
         prevVideo.src = prevStory.videoSrc;
         prevVideo.classList.add('storyplayer__content-pVideo');
-        prevVideo.controls = true;
+        // prevVideo.controls = true;
         prevVideo.onclick = () => storyPlay(prevStory.id);
         storyPrev.appendChild(prevVideo);
     }
@@ -75,7 +75,7 @@ function update() {
         const nextVideo = document.createElement('video');
         nextVideo.src = nextStory.videoSrc;
         nextVideo.classList.add('storyplayer__content-nVideo');
-        nextVideo.controls = true;
+        // nextVideo.controls = true;
         nextVideo.onclick = () => storyPlay(nextStory.id);
         storyNext.appendChild(nextVideo);
     }
