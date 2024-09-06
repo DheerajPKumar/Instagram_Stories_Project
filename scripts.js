@@ -62,10 +62,6 @@ function update() {
     
     if (currentIndex > 0) {
         let prevStory = stories[currentIndex - 1];
-        // const prevImage = document.createElement('img');
-        // prevImage.src = stories[currentIndex-1].imgSrc;
-        // prevImage.onclick = () => storyPlay(prevStory.id);
-        // storyPrev.appendChild(prevImage);
         const prevVideo = document.createElement('video');
         prevVideo.src = prevStory.videoSrc;
         prevVideo.classList.add('storyplayer__content-pVideo');
@@ -76,10 +72,6 @@ function update() {
 
     if (currentIndex < stories.length - 1) {
         const nextStory = stories[currentIndex + 1];
-        // const nextImage = document.createElement('img');
-        // nextImage.src = stories[currentIndex+1].imgSrc;
-        // nextImage.onclick = () => storyPlay(nextStory.id);
-        // storyNext.appendChild(nextImage);
         const nextVideo = document.createElement('video');
         nextVideo.src = nextStory.videoSrc;
         nextVideo.classList.add('storyplayer__content-nVideo');
